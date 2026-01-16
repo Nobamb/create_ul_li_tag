@@ -35,3 +35,36 @@
 # - 하지만 함수가 외부의 `pokemons`라는 변수에 의존하고 있어, 다른 데이터를 처리하려면 함수를 또 만들어야 하는 단점이 있습니다.
 
 # ---
+
+
+# 전역변수(배열)
+# 피카츄, 라이츄, 파이리, 꼬부기
+pokemon = ["피카츄","라이츄","파이리","꼬부기"]
+
+# pokemon이라는 배열을 모두 ul내의 li로 변경
+def create_list():
+    # 시작 생성
+    # ul 여는 태그
+    ul_li = "<ul>"
+    
+    # for 문을 통해 pokemon 배열의 값
+    # 각각의 값을 name으로 나눔
+    # 전부 li로 묶음
+    # ul에 추가
+    for name in pokemon:
+        ul_li += "<li>" + name + "</li>"
+        
+    # name을 다 더하면
+    # ul을 닫음
+    ul_li += "</ul>"
+
+    # 반환
+    return ul_li
+    
+
+# create_list 실행
+# result 값 저장
+result = create_list()
+
+# result 출력
+print(result)
