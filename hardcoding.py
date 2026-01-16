@@ -32,3 +32,25 @@
 # - **하드코딩(Hardcoding)**: 데이터가 코드 로직 속에 딱딱하게 굳어 박혀있는 상태입니다. 포켓몬 이름이 바뀌거나 늘어나면 코드 전체를 뜯어고쳐야 하므로 유지보수 최악의 단계입니다.
 
 # ---
+
+
+# 피카츄, 라이츄, 파이리를 각각의 문자열로 만든채로
+# ul내에 li로 묶기
+# ul, li 열고 닫는 태그들은 변수로 생성
+# ul열기 = ul_start
+# ul닫기 = ul_end
+# li열기 = li_start
+# li닫기 = li_end
+# + 방식으로 각각의 변수를 더함
+
+
+ul_start = "<ul>"
+ul_end = "</ul>"
+li_start = "<li>"
+li_end = "</li>"
+
+# 결과값
+result = ul_start + li_start + "피카츄" + li_end + li_start + "라이츄" + li_end +li_start + "파이리" + li_end + ul_end
+
+# 결과값 출력
+print(result)
