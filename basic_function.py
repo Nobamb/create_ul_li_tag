@@ -1,0 +1,70 @@
+# ### 2단계: 함수화 (Basic Function)
+
+# 반복되는 패턴(`<li>...</li>`)을 처리하기 위해 반복문을 도입하고, 이를 함수로 묶습니다. 하지만 데이터는 아직 함수 외부에 의존적입니다.
+
+# ```python
+# # 2단계: 반복문과 전역 변수 사용
+
+# 	pokemons = ["피카츄", "라이츄", "파이리", "꼬부기"]  # 데이터 리스트
+
+# def create_list():
+#     html_out = "<ul>"  # 시작 태그
+
+#     # 리스트에 있는 개수만큼 반복
+#     for name in pokemons:
+#         html_out = html_out + "<li>" + name + "</li>"
+
+#     html_out = html_out + "</ul>"  # 끝 태그
+#     return html_out
+
+# print(create_list())
+# ```
+
+# #### 기초 문법 해설
+
+# - **리스트(List)**: `["피카츄", ...]`는 여러 개의 데이터를 순서대로 담는 기차 칸과 같습니다.
+# - **for 반복문**: `for name in pokemons:`는 포켓몬 기차의 칸을 하나씩 확인하며 그 안의 내용물을 `name`이라는 임시 변수에 담아 아래 코드를 실행하라는 뜻입니다.
+
+# #### 논리적 설계 이유
+
+# 1단계에서는 데이터를 일일이 적었지만, 데이터의 개수가 변할 수 있다는 점을 고려하여 `for` 반복문을 사용했습니다. 이제 데이터가 100개가 되어도 코드는 늘어나지 않습니다.
+
+# #### 현업 실무 관점
+
+# - **절차적 처리(Procedural)**: 위에서 아래로 순서대로 실행되며 반복 작업을 자동화했습니다.
+# - 하지만 함수가 외부의 `pokemons`라는 변수에 의존하고 있어, 다른 데이터를 처리하려면 함수를 또 만들어야 하는 단점이 있습니다.
+
+# ---
+
+
+# 전역변수(배열)
+# 피카츄, 라이츄, 파이리, 꼬부기
+pokemon = ["피카츄","라이츄","파이리","꼬부기"]
+
+# pokemon이라는 배열을 모두 ul내의 li로 변경
+def create_list():
+    # 시작 생성
+    # ul 여는 태그
+    ul_li = "<ul>"
+    
+    # for 문을 통해 pokemon 배열의 값
+    # 각각의 값을 name으로 나눔
+    # 전부 li로 묶음
+    # ul에 추가
+    for name in pokemon:
+        ul_li += "<li>" + name + "</li>"
+        
+    # name을 다 더하면
+    # ul을 닫음
+    ul_li += "</ul>"
+
+    # 반환
+    return ul_li
+    
+
+# create_list 실행
+# result 값 저장
+result = create_list()
+
+# result 출력
+print(result)
