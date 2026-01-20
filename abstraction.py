@@ -48,5 +48,21 @@
 
 
 
+# 내용을 li태그로 변환
+def create_li_tag(item):
+    return f"<li>{item}</li>"
+
+
+# ul 구조를 만들어냄
+# 배열을 받음(items)
+# 만약에 items가 존재하지 않는다면
+# 빈 문자열을 반환(return)
+# items가 존재하면
+# 임의의 배열 생성(list_items) 
+# for in문을 통해 item를 분해하여
+# create_li_tag를 통해 li태그로 변경
+# append를 통해 list_items에 추가
+# list_items를 join을 통해 묶어서("/n") 변수에 추가(list_tags)
+# ul에 list_tags붙임
 
 
