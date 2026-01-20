@@ -1,0 +1,69 @@
+# ### 4단계: 매개변수화 (Parameterization)
+
+# 함수가 오직 “포켓몬”만 만드는 한계를 극복하기 위해, 데이터를 외부에서 주입받도록 입력 구멍(매개변수)을 뚫어줍니다.
+
+# ```python
+# # 4단계: 어떤 리스트든 HTML로 만드는 범용 함수
+
+# def generate_html_list(items):  # items라는 구멍(매개변수)을 뚫음
+#     output = "<ul>"
+
+#     for item in items:
+#         output += "<li>" + str(item) + "</li>"  # 숫자가 들어올 경우를 대비해 문자로 변환
+
+#     output += "</ul>"
+#     return output
+
+# my_pokemons = ["피카츄", "라이츄"]
+# my_digimons = ["아구몬", "파피몬"]
+
+# print(generate_html_list(my_pokemons))  # 포켓몬 리스트 생성
+# print(generate_html_list(my_digimons))  # 디지몬 리스트 생성
+# ```
+
+# #### 기초 문법 해설
+
+# - **매개변수(Parameter)**: `(items)`는 함수가 실행될 때 외부에서 값을 받아오는 출입구입니다. 자판기의 동전 투입구와 같습니다.
+# - **형 변환 `str()`**: 만약 리스트에 숫자나 다른 형태가 들어있을 수 있으므로, 안전하게 문자열(글자)로 바꿔주는 안전장치입니다.
+
+# #### 논리적 설계 이유
+
+# 3단계 함수는 “포켓몬 생성기”였지만, 이번 단계는 “리스트 생성기”로 진화했습니다. 내용물이 포켓몬이든 디지몬이든 상관없이 동작하므로 코드의 활용도가 비약적으로 상승했습니다.
+
+# #### 현업 실무 관점
+
+# - **재사용성(Reusability)**: 하나의 로직으로 다양한 상황에 대응할 수 있게 되었습니다. 개발자는 똑같은 코드를 여러 번 짜지 않고, 이 함수 하나를 계속 불러와서 사용합니다.
+
+# ---
+
+
+# 함수 생성(파라미터를 받도록)
+# 파라미터는 배열의 형태(items)
+# 배열을 나눈 값은 문자열의 형태로
+
+def generate_html_tag(items):
+    # ul 생성
+    result = "<ul>"
+    # items를 item으로 나눈 후
+    for item in items:
+        # result에 추가
+        # li같이 입히기
+        result += f"<li>{item}</li>"
+        
+    # ul 닫기
+    result += "</ul>"
+    
+    # result 반환
+    return result
+
+
+# 배열 지정
+
+my_pokemons = ["피카츄", "라이츄"]
+my_digimons = ["아구몬", "파피몬"]
+
+
+# 출력
+print(generate_html_tag(my_pokemons))
+print(generate_html_tag(my_digimons))
+
