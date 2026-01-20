@@ -42,4 +42,25 @@
 def make_pokemon_html():
     # 내부 변수(배열 형식) 생성
     # 피카츄, 라이츄, 파이리, 꼬부기
-    pokemon = ["피카츄","라이츄","파이리","꼬부기"]
+    pokemons = ["피카츄","라이츄","파이리","꼬부기"]
+    
+    # 처음 값 지정(ul)
+    result = "<ul>"
+    
+    # pokemons 배열 값을 나눔
+    for pokemon in pokemons:
+        
+        # result에 pokemon 추가
+        # li로
+        result += f"<li>{pokemon}</li>"
+        
+    
+    # result 마무리
+    result += "</ul>"
+    
+    # result 반환
+    return result
+
+
+# make_pokemon_html 실행
+print(make_pokemon_html())
