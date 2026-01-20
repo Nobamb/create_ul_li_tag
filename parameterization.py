@@ -35,3 +35,23 @@
 # - **재사용성(Reusability)**: 하나의 로직으로 다양한 상황에 대응할 수 있게 되었습니다. 개발자는 똑같은 코드를 여러 번 짜지 않고, 이 함수 하나를 계속 불러와서 사용합니다.
 
 # ---
+
+
+# 함수 생성(파라미터를 받도록)
+# 파라미터는 배열의 형태(items)
+# 배열을 나눈 값은 문자열의 형태로
+
+def generate_html_tag(items):
+    # ul 생성
+    result = "<ul>"
+    # items를 item으로 나눈 후
+    for item in items:
+        # result에 추가
+        # li같이 입히기
+        result += f"<li>{item}</li>"
+        
+    # ul 닫기
+    result += "</ul>"
+    
+    # result 반환
+    return result
