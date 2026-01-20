@@ -75,3 +75,6 @@ def ul_component_tags(items):
     
     # ul에 list_tags붙임
     result = f"<ul>{list_tags}</ul>"
+    
+    # result 반환
+    return result
