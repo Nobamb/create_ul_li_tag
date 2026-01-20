@@ -71,10 +71,10 @@ def ul_component_tags(items):
         # append를 통해 list_items에 추가
         list_items.append(li)
     # list_items를 join을 통해 묶어서("/n") 변수에 추가(list_tags)
-    list_tags = "/n".join(list_items)
+    list_tags = "\n".join(list_items)
     
     # ul에 list_tags붙임
-    result = f"<ul>{list_tags}</ul>"
+    result = f"<ul>\n{list_tags}\n</ul>"
     
     # result 반환
     return result
@@ -83,3 +83,7 @@ def ul_component_tags(items):
 
 # 임의의 배열 생성
 pokes = ["피카츄", "라이츄", "파이리"]
+
+
+# 출력
+print(ul_component_tags(pokes))
