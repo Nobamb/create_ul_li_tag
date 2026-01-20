@@ -55,3 +55,15 @@ def generate_html_tag(items):
     
     # result 반환
     return result
+
+
+# 배열 지정
+
+my_pokemons = ["피카츄", "라이츄"]
+my_digimons = ["아구몬", "파피몬"]
+
+
+# 출력
+print(generate_html_tag(my_pokemons))
+print(generate_html_tag(my_digimons))
+
