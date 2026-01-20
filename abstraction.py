@@ -78,3 +78,8 @@ def ul_component_tags(items):
     
     # result 반환
     return result
+
+
+
+# 임의의 배열 생성
+pokes = ["피카츄", "라이츄", "파이리"]
